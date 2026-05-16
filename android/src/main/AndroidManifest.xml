@@ -136,11 +136,12 @@
         <meta-data
             android:name="android.content.APP_RESTRICTIONS"
             android:resource="@xml/app_restrictions" />
-    
+
         <receiver android:name=".TermuxPluginReceiver" android:exported="true">
             <intent-filter>
-                <action android:name="com.tailscale.ipn.TERMUX_UP" />
-                <action android:name="com.tailscale.ipn.TERMUX_DOWN" />
+                <action android:name="com.tailscale.ipn.CONNECT_VPN" />
+                <action android:name="com.tailscale.ipn.DISCONNECT_VPN" />
+                <action android:name="com.tailscale.ipn.USE_EXIT_NODE" />
                 <action android:name="com.tailscale.ipn.TERMUX_TOGGLE" />
                 <action android:name="com.tailscale.ipn.TERMUX_STATUS" />
             </intent-filter>
@@ -152,5 +153,6 @@
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
         </receiver>
-</application>
+
+    </application>
 </manifest>
