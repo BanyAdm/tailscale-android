@@ -74,7 +74,7 @@ android {
         kotlinCompilerExtensionVersion = "$compose_version"
     }
     flavorDimensions "version"
-    namespace 'com.banyadm.tailscale'
+    namespace 'com.tailscale.ipn'
 
     buildTypes {
         applicationTest {
