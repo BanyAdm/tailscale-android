@@ -30,11 +30,11 @@
     <string name="cancel">Cancel</string>
 
     <!-- Strings for the about screen -->
-    <string name="app_name" translatable="false">Tailscale</string>
+    <string name="app_name" translatable="false">Termux:Tailscale</string>
     <string name="tile_name" translatable="false">Tailscale</string>
     <string name="version">Version</string>
-    <string name="about_view_header">About Tailscale</string>
-    <string name="about_view_title">Tailscale for Android</string>
+    <string name="about_view_header">About Termux:Tailscale</string>
+    <string name="about_view_title">Termux:Tailscale</string>
     <string name="acknowledgements">Acknowledgements</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_service">Terms of Service</string>
