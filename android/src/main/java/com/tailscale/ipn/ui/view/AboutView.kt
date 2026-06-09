@@ -9,9 +9,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -23,6 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -32,7 +33,6 @@ import androidx.compose.ui.unit.dp
 import com.tailscale.ipn.BuildConfig
 import com.tailscale.ipn.R
 import com.tailscale.ipn.ui.Links
-import com.tailscale.ipn.ui.theme.logoBackground
 import com.tailscale.ipn.ui.util.AppVersion
 
 @Composable
@@ -50,14 +50,10 @@ fun AboutView(backToSettings: BackNavigation) {
                 .fillMaxHeight()
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())) {
-          TailscaleLogoView(
-              usesOnBackgroundColors = true,
-              modifier =
-                  Modifier.width(100.dp)
-                      .height(100.dp)
-                      .clip(RoundedCornerShape(50))
-                      .background(MaterialTheme.colorScheme.logoBackground)
-                      .padding(25.dp))
+          Image(
+              painter = painterResource(id = R.drawable.ic_launcher),
+              contentDescription = null,
+              modifier = Modifier.size(100.dp).clip(RoundedCornerShape(50)))
 
           Column(
               verticalArrangement =
