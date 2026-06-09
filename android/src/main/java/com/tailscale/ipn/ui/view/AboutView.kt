@@ -50,6 +50,7 @@ fun AboutView(backToSettings: BackNavigation) {
                 .fillMaxHeight()
                 .padding(innerPadding)
                 .verticalScroll(rememberScrollState())) {
+          TailscaleLogoView(
               usesOnBackgroundColors = true,
               modifier =
                   Modifier.width(100.dp)
